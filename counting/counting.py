@@ -133,3 +133,26 @@ class Counting(commands.Cog):
             return
         elif message.content == str(current_count):
             await message_channel.send(f"{current_count} (Изтрито съобщение изпратено от {message.author.mention}).")
+
+    @commands.Cog.listener()
+    async def on_message_edit(self, before: discord.Message, after: discord.Message) -> None:
+        guild = before.guild
+        if guild is None:
+            return
+        if await self.bot.cog_disabled_in_guild(self, guild):
+            return
+        if guild.me.is_timed_out():
+            return
+        if before.content == after.content:
+            return
+
+        guild_data = self.config.guild(guild)
+        current_count = await guild_data.current_count()
+        if before.content == str(current_count):
+            try:
+                await after.delete()
+                await before.channel.send(f"{current_count} (Радактирано съобщение изпратено от {before.author.mention}).")
+            except discord.Forbidden:
+                await after.channel.send(
+                    "Нямам права да изтривам съобщения. Моля уверете се, че имам права за 'Управление на съобщения'.")
+                return
