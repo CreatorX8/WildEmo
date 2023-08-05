@@ -82,6 +82,11 @@ class BirthdayCommands(MixinMeta):
             await ctx.send("Не може да зададете рождения си ден в бъдещето.")
             return
 
+        if birthday.month == 2 and birthday.day == 29:
+            await ctx.send("Съжаляваме, но не може да зададете рождения си ден на 29-ти февруари. Задайте го на 28-ми "
+                           "февруари.")
+            return
+
         async with self.config.member(ctx.author).birthday() as bday:
             bday["year"] = birthday.year if birthday.year != 1 else None
             bday["month"] = birthday.month
@@ -518,6 +523,11 @@ class BirthdayAdminCommands(MixinMeta):
 
         if birthday > datetime.datetime.utcnow():
             await ctx.send("Не може потребителя да е роден в бъдещето.")
+            return
+
+        if birthday.month == 2 and birthday.day == 29:
+            await ctx.send("Съжаляваме, но не може да зададете рождения си ден на 29-ти февруари. Задайте го на 28-ми "
+                           "февруари.")
             return
 
         async with self.config.member(user).birthday() as bday:
