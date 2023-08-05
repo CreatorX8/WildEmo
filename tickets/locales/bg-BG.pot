@@ -1,0 +1,293 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2023-08-05 15:17-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: redgettext 3.4.2\n"
+
+#: menu.py:65 views.py:76
+msgid "You are not allowed to interact with this button."
+msgstr "Не можете да взаимодействате с този бутон."
+
+#: tickets.py:28
+#, docstring
+msgid ""
+"\n"
+"    Support ticket system with multi-panel functionality\n"
+"    "
+msgstr ""
+"\n"
+"    Система за поддръжка на билети с многофункционалност на панела\n"
+"    "
+
+#: tickets.py:41
+#, docstring
+msgid "No data to delete"
+msgstr "Няма данни за изтриване"
+
+#: tickets.py:297
+msgid ""
+"If you do not respond to this ticket within the next 20 minutes it will be "
+"closed automatically."
+msgstr ""
+"Ако не отговорите на този билет в следващите 20 минути, той ще бъде "
+"затворен автоматично."
+
+#: tickets.py:313
+msgid "(Auto-Close) Opened ticket with no response for "
+msgstr "(Автоматично затваряне) Отворен билет без отговор за "
+
+#: tickets.py:362
+msgid "User left guild(Auto-Close)"
+msgstr "Потребителят напусна гилдията (Автоматично затваряне)"
+
+#: utils.py:103
+msgid "I am missing the `Manage Channels` permission to close this ticket!"
+msgstr "Липсва ми разрешението `Управление на канали`, за да затворя този билет!"
+
+#: utils.py:109
+msgid "I am missing the `Manage Threads` permission to close this ticket!"
+msgstr "Липсва ми разрешението `Управление на нишки`, за да затворя този билет!"
+
+#: utils.py:116
+msgid ""
+"Ticket created by **{}-{}** has been closed.\n"
+"`PanelType: `{}\n"
+"`Opened on: `<t:{}:F>\n"
+"`Closed on: `<t:{}:F>\n"
+"`Closed by: `{}\n"
+"`Reason:    `{}\n"
+msgstr ""
+"Билетът, създаден от **{}-{}**, е затворен.\n"
+"`Панел: `{}\n"
+"`Отворен на: `<t:{}:F>\n"
+"`Затворен на: `<t:{}:F>\n"
+"`Затворен от: `{}\n"
+"`Причина:    `{}\n"
+
+#: utils.py:132
+msgid ""
+"Ticket Closed\n"
+"{}\n"
+"Currently missing permissions to send embeds to this channel!"
+msgstr ""
+"Билетът е затворен\n"
+"{}\n"
+"В момента липсват разрешения за изпращане на вградени обекти към този канал!"
+
+#: utils.py:136
+msgid "Ticket Closed"
+msgstr "Билетът е затворен"
+
+#: utils.py:147
+msgid "Archiving channel..."
+msgstr "Архивиране на канала..."
+
+#: utils.py:150
+msgid "This channel will be deleted once complete"
+msgstr "Този канал ще бъде изтрит, щом приключи"
+
+#: utils.py:156
+msgid ""
+"Question: {}\n"
+"Response: {}\n"
+msgstr ""
+"Въпрос: {}\n"
+"Отговор: {}\n"
+
+#: utils.py:167
+msgid "Files uploaded: "
+msgstr "Качени файлове: "
+
+#: utils.py:258
+msgid "There are no tickets stored in the database."
+msgstr "Няма билети, съхранени в базата данни."
+
+#: utils.py:288
+msgid "ticket"
+msgstr "билет"
+
+#: utils.py:288
+msgid "tickets"
+msgstr "билети"
+
+#: utils.py:289
+msgid "Pruned `{}` invalid {}"
+msgstr "Изчистени `{}` невалидни {}"
+
+#: utils.py:292
+msgid "There are no tickets to prune"
+msgstr "Няма билети за изчистване"
+
+#: utils.py:300
+msgid "Ticket Overview"
+msgstr "Преглед на билети"
+
+#: utils.py:325
+msgid "There are no active tickets."
+msgstr "Няма активни билети."
+
+#: utils.py:354
+#, docstring
+msgid ""
+"Update active ticket overview\n"
+"\n"
+"    Args:\n"
+"        guild (discord.Guild): discord server\n"
+"        conf (dict): settings for the guild\n"
+"\n"
+"    Returns:\n"
+"        int: Message ID of the overview panel\n"
+"    "
+msgstr ""
+"Актуализиране на прегледа на активни билети\n"
+"\n"
+"    Аргументи:\n"
+"        guild (discord.Guild): discord сървър\n"
+"        conf (dict): настройки за сървъра\n"
+"\n"
+"    Връща:\n"
+"        int: Идентификатор на съобщението на панела за преглед\n"
+"    "
+
+#: views.py:38
+msgid "cancel"
+msgstr "отказ"
+
+#: views.py:130
+msgid "Closing your ticket"
+msgstr "Затваряне на билета Ви"
+
+#: views.py:132
+msgid "Reason for closing"
+msgstr "Причина за затваряне"
+
+#: views.py:174
+msgid "You do not have permissions to close this ticket"
+msgstr "Нямате разрешение да затворите този билет"
+
+#: views.py:186 views.py:188
+msgid "Closing..."
+msgstr "Затваряне..."
+
+#: views.py:259
+msgid "You been blacklisted from creating tickets!"
+msgstr "Вие сте в черния списък за създаване на билети!"
+
+#: views.py:265
+msgid "You have a role that has been blacklisted from creating tickets!"
+msgstr "Имате роля, която е в черния списък за създаване на билети!"
+
+#: views.py:277
+msgid "You must have one of the following roles to open this ticket: "
+msgstr "Трябва да имате една от следните роли, за да отворите този билет: "
+
+#: views.py:290
+msgid "You have the maximum amount of tickets opened already!"
+msgstr "Вече имате максималния брой отворени билети!"
+
+#: views.py:297
+msgid ""
+"The category for this support panel cannot be found!\n"
+"please contact an admin!"
+msgstr ""
+"Категорията за този панел за поддръжка не може да бъде намерена!\n"
+"моля, свържете се с администратор!"
+
+#: views.py:312
+msgid "Submission Info"
+msgstr "Информация за изпращане"
+
+#: views.py:330
+msgid "Unanswered"
+msgstr "Без отговор"
+
+#: views.py:419
+msgid "{} ticket for {}"
+msgstr "{} билет за {}"
+
+#: views.py:443
+msgid ""
+"I am missing the required permissions to create a ticket for you. Please "
+"contact an admin so they may fix my permissions."
+msgstr ""
+"Липсват ми необходимите разрешения за създаване на билет за Вас. Моля, "
+"свържете се с администратор, за да могат да поправят моите разрешения."
+
+#: views.py:455
+msgid ""
+"There was an error while preparing your ticket, please contact an admin!\n"
+"{}"
+msgstr ""
+"Възникна грешка при подготовката на билета Ви, моля, свържете се с администратор!\n"
+"{}"
+
+#: views.py:469
+msgid "Welcome to your ticket channel "
+msgstr "Добре дошли в канала за билети"
+
+#: views.py:471
+msgid ""
+"\n"
+"You or an admin can close this with the `{}close` command"
+msgstr ""
+"\n"
+"Вие или администратор можете да го затворите с командата `{}close`"
+
+#: views.py:523
+msgid "Ticket form questions"
+msgstr "Въпроси за формуляра за билети"
+
+#: views.py:526
+msgid ""
+"I tried to pin the response message but don't have the manage messages "
+"permissions!"
+msgstr ""
+"Опитах се да закача съобщението за отговор, но нямам разрешения за управление "
+"на съобщения!"
+
+#: views.py:531
+msgid "Your ticket channel has been created, **[CLICK HERE]({})**"
+msgstr "Каналът Ви за билети е създаден, **[КЛИКНЕТЕ ТУК]({})**"
+
+#: views.py:549
+msgid ""
+"`Created By: `{user}\n"
+"`User ID:    `{userid}\n"
+"`Opened:     `{timestamp}\n"
+"`Ticket:     `{channelname}\n"
+"`Panel Name: `{panelname}\n"
+"**[Click to Jump!]({jumpurl})**"
+msgstr ""
+"`Създаден от:                 `{user}\n"
+"`Потребителски идентификатор: `{userid}\n"
+"`Отворен:                     `{timestamp}\n"
+"`Билет:                       `{channelname}\n"
+"`Име на панела:               `{panelname}\n"
+"**[Кликнете, за да скочите!]({jumpurl})**"
+
+#: views.py:558
+msgid "Ticket Opened"
+msgstr "Отворен билет"
+
+#: views.py:630
+msgid "You have already been added to the ticket **{}**!"
+msgstr "Вече сте добавени към билета **{}**!"
+
+#: views.py:641
+msgid "You already have access to the ticket **{}**!"
+msgstr "Вече имате достъп до билета **{}**!"
+
+#: views.py:646
+msgid "{} was added to the ticket"
+msgstr "{} беше добавен към билета"
+
+#: views.py:651
+msgid "You have been added to the ticket **{}**"
+msgstr "Вие бяхте добавени към билета **{}**"
