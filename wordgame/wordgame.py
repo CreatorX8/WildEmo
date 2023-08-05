@@ -142,9 +142,10 @@ class WordGame(commands.Cog):
         message = payload.cached_message
         guild_data = self.config.guild(guild)
         last_word = await guild_data.last_word()
+        last_word_sayer = await guild_data.last_word_sayer()
         if message is None:
             return
-        elif message.content == str(last_word):
+        elif message.content == str(last_word) and str(message.author.id) == str(last_word_sayer):
             await message_channel.send(f"{last_word} (Изтрито съобщение изпратено от {message.author.mention}).")
 
     @commands.Cog.listener()
@@ -161,7 +162,8 @@ class WordGame(commands.Cog):
 
         guild_data = self.config.guild(guild)
         last_word = await guild_data.last_word()
-        if before.content == str(last_word):
+        last_word_sayer = await guild_data.last_word_sayer()
+        if before.content == str(last_word) and str(before.author.id) == str(last_word_sayer):
             try:
                 await after.delete()
                 await before.channel.send(f"{last_word} (Радактирано съобщение изпратено от {before.author.mention}).")

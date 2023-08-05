@@ -129,9 +129,10 @@ class Counting(commands.Cog):
         message = payload.cached_message
         guild_data = self.config.guild(guild)
         current_count = await guild_data.current_count()
+        last_counter = await guild_data.last_counter()
         if message is None:
             return
-        elif message.content == str(current_count):
+        elif message.content == str(current_count) and str(message.author.id) == str(last_counter):
             await message_channel.send(f"{current_count} (Изтрито съобщение изпратено от {message.author.mention}).")
 
     @commands.Cog.listener()
@@ -148,7 +149,8 @@ class Counting(commands.Cog):
 
         guild_data = self.config.guild(guild)
         current_count = await guild_data.current_count()
-        if before.content == str(current_count):
+        last_counter = await guild_data.last_counter()
+        if before.content == str(current_count) and str(before.author.id) == str(last_counter):
             try:
                 await after.delete()
                 await before.channel.send(f"{current_count} (Радактирано съобщение изпратено от {before.author.mention}).")
